@@ -61,7 +61,11 @@ ROOT_URLCONF = 'job_board.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+            BASE_DIR / 'crjob_board/templates',
+            BASE_DIR / 'Authentication/templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
