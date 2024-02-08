@@ -2,12 +2,13 @@
 
 {% block title %}
 Register
-{% end block%}
+{% endblock %}
 
 {% block content %}
-    <form>
-
+    <form method = "post">
+        {% csrf_token %}
+        {{ form.as_p }}
         <button type="submit">Register</button>
     </form>
 
-{% end block%}
+{% endblock %}
