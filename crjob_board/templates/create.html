@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title%}
+Post A Job
+{%endblock%}
+
+{% block content %}
+    <a href="{% url 'crjob_board:home '%}"></a>
+    <form method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{ form.as_p}}
+        <button type="submit">Post</button>
+
+    </form>
+{%endblock%}

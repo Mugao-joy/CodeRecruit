@@ -5,6 +5,18 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Main Content | Home Page</h1>
+
+<h1>Hiring Now!</h1>
+    <a href="{% url 'crjob_board:create' %}">Post a Job</a>
+
+    {% for job in jobs%}
+        <div class="card">
+            <h5 class="card-header">{{ jobs.company}}</h5>
+            <div class="card-body">
+            
+            <a href="#" class="btn btn-primary">Apply</a>
+            </div>
+        </div>
+    {% endfor %}
 
 {% endblock %}

@@ -19,9 +19,9 @@
               <a class="nav-link active" aria-current="page" href="#">Jobs</a>
               <a class="nav-link" href="#">Talent</a>
               <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="create.html">Post A Job</a>
               <input type="text" placeholder="Search..">
               <button type="button" class="btn btn-outline-danger">Hire a Consultant</button>
-              <button type="button" class="btn btn-outline-danger">Post a Job</button>
             </div>
           </div>
         </div>
@@ -59,24 +59,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="jobs">
-        <h3>Hiring Now!</h3>
-        {% for job in jobs %}
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">{{ job.company_name }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ job.role }}</h6>
-            <p class="card-text">{{ job.nature }}</p>
-            <span class="badge badge-primary">{{ job.location }}</span>
-            <ul class="list-inline">
-              {% for technology in job.technologies %}
-              <li class="list-inline-item"><span class="badge badge-secondary">{{ technology }}</span></li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
+    </div>
       
 </body>
 </html>
