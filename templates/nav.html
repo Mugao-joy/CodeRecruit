@@ -17,9 +17,9 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#">Jobs</a>
-              <a class="nav-link" href="#">Talent</a>
-              <a class="nav-link" href="#">Login</a>
-              <a class="nav-link" href="create.html">Post A Job</a>
+              <a class="nav-link" href="{% url 'Authentication:register' %}">Register</a>
+              <a class="nav-link" href="{% url 'Authentication:login' %}">Login</a>
+              <a class="nav-link" href="{% url 'crjob_board:create' %}">Post A Job</a>
               <input type="text" placeholder="Search..">
               <button type="button" class="btn btn-outline-danger">Hire a Consultant</button>
             </div>

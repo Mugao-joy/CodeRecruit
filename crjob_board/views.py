@@ -11,7 +11,7 @@ def home(request):
     job = jobs.objects.all()
 
     context = {
-        'job' : job
+        'jobs' : job
     }
     return render (request, 'home.html',context)
 

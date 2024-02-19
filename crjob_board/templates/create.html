@@ -5,7 +5,7 @@ Post A Job
 {%endblock%}
 
 {% block content %}
-    <a href="{% url 'crjob_board:home '%}"></a>
+    <a href="{% url 'crjob_board:home'%}"></a>
     <form method="post" enctype="multipart/form-data">
         {%csrf_token%}
         {{ form.as_p}}
