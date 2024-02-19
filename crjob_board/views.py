@@ -25,3 +25,6 @@ def create(request):
         'form' : form
     }
     return render(request, 'create.html', context)
+
+def submitted(request):
+    return render(request, 'submitted.html')

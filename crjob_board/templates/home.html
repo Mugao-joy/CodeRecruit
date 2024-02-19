@@ -7,15 +7,16 @@
 {% block content %}
 
 <h1>Hiring Now!</h1>
-    <a href="{% url 'crjob_board:create' %}">Post a Job</a>
 
     {% for job in jobs%}
-        <div class="card">
-            <h5 class="card-header">{{ job.company}}</h5>
-            <div class="card-body">
-            
-            <a href="#" class="btn btn-primary">Apply</a>
-            </div>
+    <div class="card">
+        <h5 class="card-header" style="background-color: #72344F;" > {{ job.job_title}}</h5>
+        <div class="card-body">
+          <h5 class="card-title">{{ job.company}}</h5>
+          <p class="card-text">{{ job.requirements}}</p>
+          <a href="{% url 'crjob_board:submitted'%}" class="btn btn-success" >Apply</a>
+        </div>
+      </div>
         </div>
     {% endfor %}
 

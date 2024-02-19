@@ -10,7 +10,8 @@ app_name = 'crjob_board'
 urlpatterns = [
     path ('landing/', views.landing, name = 'landing'),
     path ('home/', views.home, name = 'home'),
-    path ('create/', views.create, name = 'create')
+    path ('create/', views.create, name = 'create'),
+    path('submitted/', views.submitted, name='submitted')
 
 ]
 
