@@ -11,7 +11,8 @@ urlpatterns = [
     path ('landing/', views.landing, name = 'landing'),
     path ('home/', views.home, name = 'home'),
     path ('create/', views.create, name = 'create'),
-    path('submitted/', views.submitted, name='submitted')
+    path('submitted/', views.submitted, name='submitted'),
+    path('search/', views.search_results, name='search_results')
 
 ]
 

@@ -6,6 +6,13 @@
     <title>Application Submitted</title>
     <style>
         /* Add CSS styles for balloon and confetti animations */
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars */
+            background-color: #72344F; /* Background color */
+        }
         @keyframes balloon {
             0% { transform: translateY(0); }
             50% { transform: translateY(-20px); }
@@ -30,8 +37,13 @@
             background-color: #f0f;
             opacity: 0.8;
             border-radius: 50%;
-            animation: confetti 3s ease-out infinite;
+            animation: confetti 3s ease-in-out infinite;
         }
+
+        /* Generate confetti at random positions */
+        .confetti:nth-child(1) { left: 5%; }
+        .confetti:nth-child(2) { left: 10%; }
+        .confetti:nth-child(3) { left: 15%; }
     </style>
 </head>
 <body>
