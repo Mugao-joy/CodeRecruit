@@ -30,19 +30,14 @@ def create(request):
 def submitted(request):
     return render(request, 'submitted.html')
 
-def job_search(request):
-    query = request.GET.get('q')
-    if query:
-        jobs = jobs.objects.filter(title__icontains=query)
-    else:
-        jobs= jobs.objects.all()
-    return render(request, 'search_results.html', {'jobs': jobs, 'query': query})
-
 def search_results(request):
     query = request.GET.get('q')
     if query:
-        # Perform a case-insensitive search on job title or description
-        jobs = jobs.objects.filter(Q(title__icontains=query) | Q(description__icontains=query))
+        # Perform your search logic here
+        jobs = jobs.objects.filter(job_title__icontains=query)  # Example query, adjust as per your model fields
+        
+        # Pass the search results to the template
+        return render(request, 'search_results.html', {'jobs': jobs, 'query': query})
     else:
-        jobs = jobs.objects.all()
-    return render(request, 'search_results.html', {'jobs': jobs, 'query': query})
+        # Handle case where no search query is provided
+        return render(request, 'search_results.html', {'jobs': None, 'query': None})

@@ -20,16 +20,17 @@
               <a class="nav-link" href="{% url 'Authentication:register' %}">Register</a>
               <a class="nav-link" href="{% url 'Authentication:login' %}">Login</a>
               <a class="nav-link" href="{% url 'crjob_board:create' %}">Post A Job</a>
-              <input type="text" placeholder="Search..">
-              <button type="button" onclick="search()">Search</button>
+              <input type="text" class="search-input" id="searchInput" placeholder="Search..">
+              <button class="search-button" onclick="performSearch()">Search</button>
               <script>
-                    function search() {
-                        var query = document.getElementById('searchInput').value.trim();
-                        if (query !== '') {
-                            window.location.href = "{% url 'crjob_board:search_results' %}?q=" + encodeURIComponent(query);
-                        }
-                    }
-             </script>
+              function performSearch() {
+            // Get the value of the input field
+                var searchTerm = document.getElementById("searchInput").value;
+
+            // You can replace this alert with actual search functionality
+                alert(searchTerm);
+            }
+            </script>
               <button type="button" class="btn btn-outline-danger">Hire a Consultant</button>
             </div>
           </div>
@@ -47,18 +48,33 @@
              — <span class="text-base">Matthew Kimani, Arimis LTD</span>
         </div>
     </div>
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="{% static 'courosel10.png' %}" class="d-block w-1" alt="...">
+    <div class="container">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" style="overflow: hidden;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'courosel10.png' %}" class="d-block" style="width: 400px; height: 200px; object-fit: cover;" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'courosel9.png' %}" class="d-block" style="width: 400px; height: 200px; object-fit: cover;" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'courosel4.png' %}" class="d-block" style="width: 400px; height: 200px; object-fit: cover;" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'courosel1.png' %}" class="d-block" style="width: 400px; height: 200px; object-fit: cover;" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'courosel2.png' %}" class="d-block" style="width: 400px; height: 200px; object-fit: cover;" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'courosel3.png' %}" class="d-block" style="width: 400px; height: 200px; object-fit: cover;" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'courosel5.png' %}" class="d-block" style="width: 400px; height: 200px; object-fit: cover;" alt="...">
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="{% static 'courosel9.png' %}" class="d-block w-15" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'courosel4.png' %}" class="d-block w-1" alt="...">
-            </div>
-            </div>
+        </div>
+    
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -68,7 +84,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    </div>
+    
       
 </body>
 </html>
