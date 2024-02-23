@@ -8,8 +8,9 @@ from . import views
 app_name = 'crjob_board'
 
 urlpatterns = [
-    path ('landing/', views.landing, name = 'landing'),
+    path ('', views.landing, name = 'landing'),
     path ('home/', views.home, name = 'home'),
+    path ('landing/', views.landing, name = 'landing'),
     path ('create/', views.create, name = 'create'),
     path('submitted/', views.submitted, name='submitted'),
     path('search/', views.search_results, name='search_results')
