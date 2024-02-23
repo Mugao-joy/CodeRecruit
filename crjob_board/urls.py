@@ -14,7 +14,6 @@ urlpatterns = [
     path ('create/', views.create, name = 'create'),
     path('submitted/', views.submitted, name='submitted'),
     path('search/', views.search_results, name='search_results')
-
 ]
 
 if settings.DEBUG:

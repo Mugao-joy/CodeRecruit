@@ -7,8 +7,11 @@
 {% block content %}
     <form method = 'post'>
         {%csrf_token%}
-        <input type="text" name = 'username'/>
-        <input type="text" name = 'password'/>
+        <label for="id_username">Username:</label>
+        <input type="text" name="username" id="id_username">
+
+        <label for="id_password">Password:</label>
+        <input type="password" name="password" id="id_password">
         <button type="submit">Login</button>
     </form>
 

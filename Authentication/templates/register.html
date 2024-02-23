@@ -5,10 +5,12 @@ Register
 {% endblock %}
 
 {% block content %}
-    <form method = "post" action="{%url 'Authentication:register' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
+    <a href="{% url 'Authentication:register' %}"></a>
+    <form method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{ form.as_p}}
         <button type="submit">Register</button>
+
     </form>
 
 {% endblock %}
