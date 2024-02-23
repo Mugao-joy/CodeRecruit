@@ -17,10 +17,10 @@ def user_register(request):
             return redirect('Authentication:login')
     else:
         form = Userform()
-    context = {
-        'form' : form
-    }
-    return render (request, 'register.html',context)
+        context = {
+            'form' : form
+        }
+        return render (request, 'register.html',context)
 
 # Create your views here.
 def user_login(request):
